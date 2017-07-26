@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Position Display</title>
+	
+<script src="jquery-3.2.1.js"></script>
+<script>
+	$(document).ready(function(){
+    $("button").click(function(){
+        var x = $("p").position();
+        alert("Top position: " + x.top + " Left position: " + x.left);
+    });
+});
+</script>
+
+</head>
+
+<body>
+ <p>HTML element</p>
+ <button> Position </button>
+
+</body>
+</html>

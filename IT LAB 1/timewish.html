@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+
+body{
+	color: white;
+	background-color : black;
+	text-align: center;
+	font-family: monospace;
+}
+
+.decorate{
+	font-size: 60px;
+	
+}
+
+.wish{
+	color: white;
+	background-color: #d32f2f;
+	text-align: center; 
+}
+
+
+
+}
+</style>
+<script>
+function timeDisplay() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(timeDisplay, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  
+    return i;
+}
+
+function wish()
+{
+	var today = new Date();
+    var hr = today.getHours();
+    console.log(hr);
+	if(hr < 12)
+		document.getElementById('wishtxt').innerHTML = "Good Morning !!"
+	else
+		document.getElementById('wishtxt').innerHTML = "Good Evening !!"	
+}
+
+</script>
+</head>
+
+<body onload="timeDisplay()">
+
+<div id="txt" class = "decorate"></div>
+<p/>
+<p/>
+<button onclick="wish()">WISH ME!!</button>
+<p/>
+<p/>
+<div id="wishtxt" class = "wish"></div>
+</body>
+</html>

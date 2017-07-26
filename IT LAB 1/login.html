@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<style >
+		body{
+			background-color: blue;
+
+		}
+
+		h1{color: white;
+			text-align: center;
+		}
+
+		p{font-family: verdana;
+			font-size: 20px;
+		}
+	</style>
+	<script language = "javascript">
+		function check( form )
+		{
+			if(form.userid.value == "Pranav" && form.pwd.value == "abc")
+			{
+				window.open("https://www.google.co.in/?gfe_rd=cr&ei=tQh4WaPmMPPI8Af-tYvgAw","_blank")
+			}
+			else
+			{
+				alert("Incorrect Username and password")
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>Validate Credentials</h1>
+<form name = "login">
+Username
+<input type = "text" name = "userid"/>
+Password
+<input type = "password" name = "pwd"/>
+<input type="button" onclick="check(this.form)" value = "Login"/>
+<input type = "reset" value = "Cancel"> 
+</form>
+</body>
+</html>
